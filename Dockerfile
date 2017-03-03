@@ -26,3 +26,6 @@ ENV TERM=xterm
 
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
+
+
+RUN chmod +x /etc/my_init.d/10_dbus.sh
