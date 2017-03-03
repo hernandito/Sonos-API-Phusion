@@ -9,6 +9,10 @@ ENV HOME /root
 
 ADD . /build
 
+RUN chmod +x /build/prepare.sh
+RUN chmod +x /build/install.sh
+RUN chmod +x /build/cleanup.sh
+
 RUN /build/prepare.sh && \
 	/build/install.sh && \
 	/build/cleanup.sh
