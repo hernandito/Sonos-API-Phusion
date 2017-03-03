@@ -22,4 +22,3 @@ ENV TERM=xterm
 
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
-

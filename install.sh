@@ -11,8 +11,6 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 apt-get -q update && apt-get install -qy \
   build-essential \
-  libavahi-compat-libdnssd-dev \
-  libasound2-dev \
   git \
   mc \
   nodejs
