@@ -26,3 +26,34 @@ git clone https://github.com/jishi/node-sonos-http-api
 cd node-sonos-http-api
 
 npm install -g --unsafe-perm
+
+if [ ! -f /usr/lib/node_modules/sonos-http-api/settings/settings.json]; then
+	echo "================================================"
+	echo " Creating settings.json file "
+	echo "================================================"
+	
+		mkdir -p /usr/lib/node_modules/sonos-http-api/settings
+		cp /build/settings.json /app/settings/settings.json
+		cp /app/settings/settings.json /usr/lib/node_modules/sonos-http-api/settings/settings.json
+		
+	echo " Done"
+	echo "================================================" 
+fi
+
+echo " "
+
+if [ ! -f /usr/lib/node_modules/sonos-http-api/presets/presets.json]; then
+	echo "================================================"
+	echo " Creating presets.json file "
+	echo "================================================"
+	
+		mkdir -p /usr/lib/node_modules/sonos-http-api/presets
+		cp /build/presets.json /app/presets/presets.json
+		cp /app/presets/presets.json /usr/lib/node_modules/sonos-http-api/presets/presets.json
+	
+	echo " Done"
+	echo "================================================" 
+fi
+
+
+cd /usr/lib/node_modules/sonos-http-api
