@@ -7,7 +7,7 @@
 #rm /usr/bin/chfn
 #ln -s -f /bin/true /usr/bin/chfn
 
-curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 apt-get -q update && apt-get install -qy \
   build-essential \
@@ -56,4 +56,7 @@ if [ ! -f /usr/lib/node_modules/sonos-http-api/presets/presets.json]; then
 fi
 
 
-cd /usr/lib/node_modules/sonos-http-api
+
+
+
+#cd /usr/lib/node_modules/sonos-http-api
