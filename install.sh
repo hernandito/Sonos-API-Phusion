@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f /usr/lib/node_modules/sonos-http-api/settings/settings.json]; then
+if [ ! -f /build/donoterase.txt]; then
 	echo "================================================"
 	echo " Installing for First Time  "
 	echo "================================================"
@@ -71,6 +71,8 @@ if [ ! -f /usr/lib/node_modules/sonos-http-api/settings/settings.json]; then
 	echo "================================================" 
 	echo " Installation Succesfully Completed! Yay!"
 	echo "================================================" 
+	
+	cp /build/presets.json /build/donoterase.txt
 fi
 
 
