@@ -1,9 +1,6 @@
 
-FROM ubuntu:16.04 
-
-# use 12.04 precise (https://github.com/docker/docker/issues/5899)
 FROM linuxserver/baseimage
-MAINTAINER Justin Ellison <justin@techadvise.com>
+
 
 # Set correct environment variables.
 ENV DEBIAN_FRONTEND noninteractive
