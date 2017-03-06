@@ -76,5 +76,5 @@ if [ ! -f /build/donoterase.txt]; then
 fi
 
 
-cd /usr/lib/node_modules/sonos-http-api
+#cd /usr/lib/node_modules/sonos-http-api
 

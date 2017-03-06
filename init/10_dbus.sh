@@ -12,5 +12,5 @@ sh /build/install.sh
 cp /app/presets/presets.json /usr/lib/node_modules/sonos-http-api/presets/presets.json
 cp /app/settings/settings.json /usr/lib/node_modules/sonos-http-api/settings/settings.json
 
-cd /usr/lib/node_modules/sonos-http-api
-npm start
+#cd /usr/lib/node_modules/sonos-http-api
+#npm start
