@@ -10,8 +10,6 @@ ENV HOME /root
 ADD . /build
 
 RUN mkdir -p /app
-RUN mkdir -p /app/settings
-RUN mkdir -p /app/presets
 
 ADD . /app
 

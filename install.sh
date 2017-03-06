@@ -7,12 +7,18 @@
 #rm /usr/bin/chfn
 #ln -s -f /bin/true /usr/bin/chfn
 
-curl -sL https://deb.nodesource.com/setup | sudo bash -
+
+mkdir -p /app/settings
+mkdir -p /app/presets
+
+
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
 apt-get -q update && apt-get install -qy \
   build-essential \
   git \
   mc \
+  screen \
   nodejs
 
 # Fix avahi-daemon not working without dbus
@@ -33,8 +39,7 @@ if [ ! -f /usr/lib/node_modules/sonos-http-api/settings/settings.json]; then
 	echo "================================================"
 	
 		mkdir -p /usr/lib/node_modules/sonos-http-api/settings
-		cp /build/settings.json /app/settings/settings.json
-		cp /app/settings/settings.json /usr/lib/node_modules/sonos-http-api/settings/settings.json
+		cp /build/settings.json /usr/lib/node_modules/sonos-http-api/settings/settings.json
 		
 	echo " Done"
 	echo "================================================" 
@@ -48,8 +53,7 @@ if [ ! -f /usr/lib/node_modules/sonos-http-api/presets/presets.json]; then
 	echo "================================================"
 	
 		mkdir -p /usr/lib/node_modules/sonos-http-api/presets
-		cp /build/presets.json /app/presets/presets.json
-		cp /app/presets/presets.json /usr/lib/node_modules/sonos-http-api/presets/presets.json
+		cp /build/presets.json /usr/lib/node_modules/sonos-http-api/presets/presets.json
 	
 	echo " Done"
 	echo "================================================" 
