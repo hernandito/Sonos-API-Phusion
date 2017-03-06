@@ -1,5 +1,5 @@
 # use 12.04 precise (https://github.com/docker/docker/issues/5899)
-FROM phusion/baseimage:0.9.9
+FROM linuxserver/baseimage
 MAINTAINER Justin Ellison <justin@techadvise.com>
 
 # Set correct environment variables.
@@ -19,9 +19,9 @@ RUN chmod +x /build/prepare.sh
 RUN chmod +x /build/install.sh
 RUN chmod +x /build/cleanup.sh
 
-RUN /build/prepare.sh && \
-	/build/install.sh && \
-	/build/cleanup.sh
+RUN bash /build/prepare.sh
+RUN	bash /build/install.sh
+RUN	bash /build/cleanup.sh
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]

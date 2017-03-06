@@ -17,11 +17,14 @@ apt-get install -qy \
   build-essential \
   git \
   mc \
+  python-software-properties \
   screen
 
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 apt-get install -y nodejs
 
+node -v
+npm -v
 
 
 # Fix avahi-daemon not working without dbus
