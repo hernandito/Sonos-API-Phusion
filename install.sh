@@ -11,15 +11,18 @@
 mkdir -p /app/settings
 mkdir -p /app/presets
 
+apt-get -q update
 
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-
-apt-get -q update && apt-get install -qy \
+apt-get install -qy \
   build-essential \
   git \
   mc \
-  screen \
-  nodejs
+  screen
+
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
+apt-get install -y nodejs
+
+
 
 # Fix avahi-daemon not working without dbus
 #sed -i -e "s#\#enable-dbus=yes#enable-dbus=false#g" /etc/avahi/avahi-daemon.conf
